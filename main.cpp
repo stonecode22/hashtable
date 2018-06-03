@@ -31,6 +31,11 @@ int main()
   ha.add(g);
   cout << " - - - - \n";
   ha.display();
+  cout << " - - - - \n";
+  ha.rem(20);
+  ha.rem(201);
+  ha.rem(4);
+  ha.display();
   return 0;
   
 }

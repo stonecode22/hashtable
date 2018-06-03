@@ -17,6 +17,12 @@ int hashTable::add(student kid)
   return 1;
 }
 
+int hashTable::rem(int id)
+{
+  array[hf(id)].rem(id);
+  return 1;
+}
+
 void hashTable::display()
 {
   for(int i = 0; i < size; i++)

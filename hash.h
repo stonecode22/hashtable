@@ -9,6 +9,7 @@ class hashTable
   hashTable();
   ~hashTable();
   int add(student kid);
+  int rem(int id);
   void display();
   
  private:

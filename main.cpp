@@ -9,6 +9,7 @@
 
 student sGenerator(int id); //random student generator
 const int SIZE = 30;
+const int RANDOMS = 10; //change number to start with a different amount of randomly generated students
 
 int main()
 {
@@ -19,7 +20,7 @@ int main()
   srand(time(NULL)); //random generator based on time
 
   //add initial 10 students into the list
-  for(int i = 0; i < 10; i++)
+  for(int i = 0; i < RANDOMS; i++)
     {
       id = i; //set the id to whatever this number is
       ha.add(sGenerator(i)); //add the random student to hash table

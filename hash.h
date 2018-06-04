@@ -11,6 +11,7 @@ class hashTable
   int add(student kid);
   int rem(int id);
   void display();
+  int checkSize();
   
  private:
   int hf(int key);

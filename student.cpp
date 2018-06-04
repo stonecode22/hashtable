@@ -73,7 +73,7 @@ int student::setId(int newId)
 void student::displayAll()
 {
   cout << endl << first << " " << last << endl;
-  cout << "GPA: " << gpa << endl;
+  cout << "GPA: " << fixed << setprecision(2) << gpa << endl;
   cout << "ID: " << id << endl;
 }
   

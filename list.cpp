@@ -2,6 +2,7 @@
 
 list::list()
 {
+  count = 0;
   head = NULL;
 }
 
@@ -13,6 +14,7 @@ list::~list()
       delete head;
       head = temp;
     }
+  count = 0;
 }
 
 int list::add(student newKid)
@@ -31,6 +33,7 @@ int list::add(node* &head, student newKid)
       newNode->kid.setId(newKid.getId());
       newNode->next = NULL;
       head = newNode;
+      count++;
       return 1;
     }
   else
@@ -57,6 +60,7 @@ int list::rem(node* &head, int id)
 	  node* temp = head->next;
 	  delete head;
 	  head = temp;
+	  count--;
 	  return 1;
 	}
       else
@@ -64,6 +68,11 @@ int list::rem(node* &head, int id)
 	  return rem(head->next, id);
 	}
     }
+}
+
+int list::colCheck()
+{
+  return count;
 }
 
 void list::display()
@@ -82,3 +91,52 @@ void list::display()
 	}
     }
 }
+
+int list::retId()
+{
+  if(head != NULL)
+    {
+      return head->kid.getId();
+    }
+  else
+    {
+      return -1;
+    }
+}
+
+char* list::retFirst()
+{
+  if(head != NULL)
+    {
+      return head->kid.getFirst();
+    }
+  else
+    {
+      return NULL;
+    }
+}
+
+char* list::retLast()
+{
+  if(head != NULL)
+    {
+      return head->kid.getLast();
+    }
+  else
+    {
+      return NULL;
+    }
+}
+
+float list::retGpa()
+{
+  if(head != NULL)
+    {
+      return head->kid.getGpa();
+    }
+  else
+    {
+      return -1;
+    }
+}
+      
